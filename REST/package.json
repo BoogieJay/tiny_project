@@ -1,0 +1,19 @@
+{
+  "name": "restful_routing",
+  "version": "1.0.0",
+  "description": "restful_routing_blog",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BoogieJay/tiny_project.git"
+  },
+  "author": "Jie Wang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BoogieJay/tiny_project/issues"
+  },
+  "homepage": "https://github.com/BoogieJay/tiny_project#readme"
+}
