@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/BoogieJay/tiny_project/issues"
   },
-  "homepage": "https://github.com/BoogieJay/tiny_project#readme"
+  "homepage": "https://github.com/BoogieJay/tiny_project#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "ejs": "^2.5.5",
+    "express": "^4.14.0",
+    "mongoose": "^4.7.7",
+    "nodemon": "^1.11.0"
+  }
 }
