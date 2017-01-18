@@ -4,7 +4,8 @@
   "description": "restful_routing_blog",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
     "body-parser": "^1.15.2",
     "ejs": "^2.5.5",
     "express": "^4.14.0",
+    "express-sanitizer": "^1.0.1",
     "method-override": "^2.3.7",
     "mongoose": "^4.7.7",
     "nodemon": "^1.11.0"
