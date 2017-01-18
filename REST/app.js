@@ -29,12 +29,29 @@ app.get("/", function(req, res){
     res.redirect("/index");
 })
 
+// index 
 app.get("/index", function(req, res){
     Blog.find({}, function(err, blogs){
         if (err){
             console.log("errs in index page");
         } else {
             res.render("index", {blogs : blogs});
+        }
+    })
+})
+
+// new
+app.get("/blogs/new", function(req,res){
+    res.render("new");
+})
+
+// create
+app.post("/blogs", function(req, res){
+    Blog.create(req.body.blog, function(err, newBlog){
+        if (err){
+            res.render("new");
+        } else {
+            res.redirect("/");
         }
     })
 })
