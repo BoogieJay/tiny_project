@@ -5,3 +5,8 @@ i.icon {
 div.segment.main {
     margin-top: 10em;
 }
+
+
+#delete {
+    display: inline;
+}
