@@ -2,22 +2,27 @@
 
 /*Font*/
 $navLeft:'Dancing Script', cursive;
+$introFont: 'Lato', sans-serif;
 
-
+/*Color*/
+$fontColor: #fff6d2;
+$fontColor2: #F7F6ED;
 
 html{
 	height: 100%;
 }
 
-body, nav {
+body{
+	height: 100%;
 	margin: 0 0;
 }
 
 
 nav {
-	height: 200px;
+	padding-top: 15px;
+	height: 25%;
 	width: 100%;
-	background: rgba(0,0,0,0.1);
+	background: rgba(0,0,0, 0.3);
 	clip-path: polygon(
 		0 0, 
 		100% 0,
@@ -25,43 +30,78 @@ nav {
 		0 calc(100% - 6vw)
 	);
 
-
-	
 	header {
-		font-size: 50px;
+		padding-left: 40px;
+		font-size: 65px;
+		color: $fontColor;
 		font-family: $navLeft;
 	}
 
-	ul {
+
+	hr {
+		border: 0;
+    	height: 1.3px;
+    	background: #333;
+    	background-image: linear-gradient(to right, #333, $fontColor 50%, #333);
+	}
+
+	nav ul{
 		margin: 0 0;
 		list-style: none;
-
-		li {
-			margin-right: 80px;
-			display: inline-block;
-			float: right;
-			color: #000;
-
-			a {
-				text-decoration: none;
-				color: #000;
-			}
-
-		}
-
 	}
 }
 
 
-hr.hr-style {
-    border: 0;
-    height: 1px;
-    background: #333;
-    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+
+nav ul li{
+	margin-right: 80px;
+	display: inline-block;
+	float: right;
+
+	a {
+		font-size:20px;
+		text-decoration: none;
+		color: $fontColor;
+	}
 }
 
 
-.container {
-	padding: 20px 50px;
+#bio {
+	height: 100%;
+	background: url(../image/cover3.jpg);
+	background-size: cover;
+	background-position: center;
 }
+
+#bio p {
+	margin: 0 0 ;
+	clip-path: polygon(
+		0 calc(100% - 35vw),
+		50% 100%,
+		0 100%
+	);
+	background-image: linear-gradient(to bottom right, rgba(0,0,0,0.4), rgba(0,0,0,0) 40%);
+	height: 75%;
+	width: 100%;
+	color: $fontColor2;
+	font-size: 1.4em;
+	font-family: $introFont;
+	line-height: 1.4em;
+	padding-left: 20px;
+}
+
+#bio p::before {
+	content:"";
+	height: 100%;
+	width: 100%;
+	float: right;
+	shape-outside: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 0 calc(100% - 35vw));
+}
+
+
+#project {
+	height: 500px;
+	border: 10px yellow solid;
+}
+
 
