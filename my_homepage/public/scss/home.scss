@@ -3,6 +3,8 @@
 /*Font*/
 $navLeft:'Dancing Script', cursive;
 $introFont: 'Lato', sans-serif;
+$projectFont:'Lobster', cursive;
+
 
 /*Color*/
 $fontColor: #fff6d2;
@@ -15,6 +17,7 @@ html{
 body{
 	height: 100%;
 	margin: 0 0;
+	background: black;
 }
 
 
@@ -68,7 +71,7 @@ nav ul li{
 
 #bio {
 	height: 100%;
-	background: url(../image/cover.jpg);
+	background: url(../img/cover8.jpg);
 	background-size: cover;
 	background-position: center;
 }
@@ -80,11 +83,11 @@ nav ul li{
 		50% 100%,
 		0 100%
 	);
-	background-image: linear-gradient(to bottom right, rgba(0,0,0,0.4), rgba(0,0,0,0) 40%);
+	background-image: linear-gradient(to bottom right, rgba(0,0,0,0.4), rgba(0,0,0,0) 60%);
 	height: 75%;
 	width: 100%;
 	color: $fontColor2;
-	font-size: 1.4em;
+	font-size: 25px;
 	font-family: $introFont;
 	line-height: 1.4em;
 	padding-left: 20px;
@@ -99,9 +102,271 @@ nav ul li{
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #project {
-	height: 500px;
-	border: 10px yellow solid;
+	position: relative;
+	height: 100%;
+	border: 1px rgba(0,0,0,0.01) solid;
+	background-color: black;
+	color: $fontColor2;
+
 }
 
+
+
+#projectTitle {
+	position:absolute;
+	width: 100%;
+	height: 100%;
+	margin:0;
+	clip-path: polygon(
+		60% 0,
+		100% 0,
+		100% 100%,
+		85% 100%,
+		85% 20%
+	);
+	background-image: linear-gradient(to left, black 2%, rgba(100,100,100,0.23), black 35%);
+
+
+	p{	
+		margin: 0;
+		padding-top: 50px;
+		padding-left: 80%;
+		color:$fontColor;
+		font-size: 55px;
+		font-family: $projectFont;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+.demo {
+	position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left:0;
+/*    ul {
+    	height: 100%;
+        list-style: none outside none;
+        padding-left: 0;
+        margin-bottom:0;
+        width: 100%;
+    }*/
+
+    .lSSlideOuter.vertical{
+    	width: 80%;
+    	margin: 10% auto;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.lSSlideOuter .lSSlideWrapper.usingCss ul li {
+	position: relative;
+    display: block;
+    /*float: left;*/
+    margin-right: 6px;
+    cursor:pointer;
+    height: 100%;
+
+    div.img-div{
+    	position: absolute;
+    	top: 25%;
+    	display: inline-block;
+    	width: 50%;
+
+    	img {
+    		border:2px solid rgba(255,255,255,0.3);
+    		padding: 5px;
+    		margin:0 auto;
+	        width: 80%;
+	        display: block;
+    	}
+
+    }
+    
+    article {
+    	margin: 0;
+    	height: 100%;
+    	position: absolute;
+    	display: inline-block;
+    	left: 50%;
+    	width: 40%;
+    	padding-left: 5%;
+
+    	h1 {
+    		text-align: center;
+    		border-left: 3px solid orange;
+    		border-right: 3px solid orange;
+    		margin-bottom: 100px;
+    		font-size:25px;
+    	}
+
+    	ul {
+    		display: block;
+    		width: 80%;
+    		height: 40%;
+
+    		li {
+    			margin-bottom: 20px;
+    			padding-left:20px;
+    			height: auto;
+    		}
+    	}
+
+    	a {	
+    		text-decoration: none;
+    		color:$fontColor2;
+    		border:1px solid black;
+    		border-radius: 8px;
+    		margin:0 10px;
+    		padding: 3px;
+    		color:black;
+    		font-size: 20px;
+
+    		i {
+    			margin-right: 7px;
+    		}
+    	}
+
+    	.applink {
+    		background: coral;
+    	}
+
+    	.gitlink {
+    		background: darksalmon;
+    	}
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.lSSlideOuter ul.lSPager.lSGallery li{
+	/*background: rgba(0,0,0,0.5);*/
+	position: relative;
+
+
+	a img{
+		position: absolute;
+		top:25%;
+		left:25%;
+		height: 50%;
+		width: auto;
+		border: 1px solid rgba(255,255,255,0.5);
+		border-radius: 5px;
+		padding: 3px;
+		transition: all 1s ease;
+		-webkit-filter: grayscale(1); /* Safari 6.0 - 9.0 */
+    	filter: grayscale(1);
+    	opacity: 0.4;
+    	filter: alpha(opacity=40); /* For IE8 and earlier */
+	}
+
+	a img:hover{
+		opacity: 1;
+		filter: alpha(opacity=100); /* For IE8 and earlier */
+		-webkit-filter: grayscale(0); /* Safari 6.0 - 9.0 */
+    	filter: grayscale(0);
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+#contact{
+	width: 100%;
+	height: 20%;
+	color: $fontColor2;
+	background: black;
+
+	p{
+		margin:0;
+		text-align: center;
+		padding: 10px 0;
+	}
+
+	p:first-child {
+		padding-top: 20px;
+		margin:50px auto 0 auto;
+		width: 30%;
+		border-top:1px rgba(255,255,255,0.5) solid;
+	}
+
+	a {
+		text-decoration: none;
+		color: white;
+		font-size: 20px;
+		border:1px white solid;
+		border-radius: 5px;
+		margin:0 5px;
+
+		i {
+			padding: 10px 10px;
+		}
+
+	}
+
+}
 

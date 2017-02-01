@@ -3,8 +3,12 @@
 <head>
 	<title>Jie Wang</title>
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/icon.min.css">
-	<link rel="stylesheet" type="text/css" href="../public/css/home.css">
-	<link href="https://fonts.googleapis.com/css?family=Dancing+Script:700|Lato" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Dancing+Script:700|Lato|Lobster" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="../public/css/lightslider.min.css" />
+	<link rel="stylesheet" type="text/css" href="../public/css/home.css"> 
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>               
+	<script type="text/javascript" src="../public/js/lightslider.min.js"></script>
+	<script type="text/javascript" src="../public/js/home.js"></script>
 </head>
 <body>
 
@@ -13,8 +17,8 @@
 			<header>Jie Wang</header>
 			<hr>
 			<ul>
-				<li><a href="#"><i class="call icon"></i>Contact</a></li>
-				<li><a href="#"><i class="laptop icon"></i> Project</a></li>
+				<li><a href="#contact"><i class="call icon"></i>Contact</a></li>
+				<li><a href="#project"><i class="laptop icon"></i> Project</a></li>
 				<li><a href="#bio"><i class="user icon"></i> Biography</a></li>
 			</ul>
 		</nav>
@@ -27,7 +31,69 @@
 
 
 	<div id = "project">
-		
+		<div id="projectTitle"><p >Project</p></div>
+		<div class="demo">
+		    <ul id="lightSlider">
+		        <li data-thumb="../public/img/CitiBike.png">
+		        	<div class = "img-div"><img src="../public/img/CitiBike.png" /></div>
+		            <article>
+		            	<h1>Predictive Analysis for NYC Citi Bike Replenishment</h1>
+		            	<h3>Analysis system based on Hadoop to forecast top 10 bike stations needing immediate replenishment</h3>
+		            	<ul>
+		            		<li>Collect thousands of station data(JSON) every day and write MapReduce program in JAVA to profile and clean data</li>
+		            		<li>Analyze with Spark in Python to make prediction and visualize the result with MapBox and Seaborn</li>
+		            	</ul>
+		            	<a class="applink" href="https://immense-earth-51231.herokuapp.com/" target="_blank"><i class="bicycle icon"></i>App Page</a>
+		            	<a class="gitlink" href="https://github.com/BoogieJay/citi_bike_replenishment_project" target="_blank"><i class="github icon"></i>Github</a>
+		            </article>
+		        </li>
+		        <li data-thumb="../public/img/cookzilla.png">
+		        	<div class = "img-div"><img src="../public/img/cookzilla.png" /></div>
+		            <article>
+		            	<h1>Cookzilla Web</h1>
+		            	<h3>Cooking recipe social website</h3>
+		            	<ul>
+		            		<li>Design the structure of 15 tables in MySQL database with decent normal forms</li>
+		            		<li>Customize Bootstrap with Javascript, CSS and HTML for a well-formed UI</li>
+		            		<li>Write PHP code to interact with MySQL database</li>
+		            	</ul>
+		            	<a class="applink" href="https://boiling-everglades-53751.herokuapp.com" target="_blank"><i class="food icon"></i>App Page</a>
+		            	<a class="gitlink" href="https://github.com/BoogieJay/database_project" target="_blank"><i class="github icon"></i>Github</a>
+		            </article>
+		        </li><li data-thumb="../public/img/yelpCamp.png">
+		        	<div class = "img-div"><img src="../public/img/yelpCamp.png" /></div>
+		            <article>
+		            	<h1>YelpCamp</h1>
+		            	<h3>Camping Social Website</h3>
+		            	<ul>
+		            		<li>Design UI based on Bootstrap for camping lovers to upload image blog with JavaScript, HTML, CSS</li>
+		            		<li>Design authentication for users login and data association by using Passport.js and Express-session</li>
+		            		<li>Use MongoDB as data warehouse and deploy whole website on the Heroku</li>
+		            	</ul>
+		            	<a class="applink" href="https://gentle-bastion-51541.herokuapp.com/campgrounds" target="_blank"><i class="tree icon"></i>App Page</a>
+		            	<a class="gitlink" href="https://github.com/BoogieJay/Camping-Social-Web" target="_blank"><i class="github icon"></i>Github</a>
+		            </article>
+		        </li><li data-thumb="../public/img/RESTful.png">
+		        	<div class = "img-div"><img src="../public/img/RESTful.png" /></div>
+		            <article>
+		            	<h1>RESTful Blog</h1>
+		            	<h3>An image blog based on RESTful route design</h3>
+		            	<ul>
+		            		<li>Customize web style with css based on Semantic UI</li>
+		            		<li>Write seven RESTful route with Node.js</li>
+		            	</ul>
+		            	<a class="applink" href="https://frozen-brook-61597.herokuapp.com/index" target="_blank"><i class="code icon"></i>App Page</a>
+		            	<a class="gitlink" href="https://github.com/BoogieJay/tiny_project/tree/master/REST" target="_blank"><i class="github icon"></i>Github</a>
+		            </article>
+		        </li>     
+		    </ul>
+		</div>
+	</div>
+
+	<div id="contact">
+		<p>E-mail: jw4100@nyu.edu | Phone: (+1)646-673-5775</p>
+		<p><a href="https://github.com/BoogieJay" target="_blank"><i class="github icon"></i></a> <a href="https://www.linkedin.com/in/jie-wang-32618a105" target="_blank"><i class="linkedin icon"></i></a></p>
+		<p>Copyright &copy; 2017 JieWang</p>
 	</div>
 
 </body>
