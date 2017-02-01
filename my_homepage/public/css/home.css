@@ -9,15 +9,23 @@ body {
   margin: 0 0;
   background: black; }
 
+/*bio div*/
+#bio {
+  height: 100%;
+  background: url(../img/cover.jpg);
+  background-size: cover;
+  background-position: center; }
+
+/*nav*/
 nav {
   padding-top: 15px;
-  height: 25%;
+  height: 28%;
   width: 100%;
   background: rgba(0, 0, 0, 0.3);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 6vw)); }
   nav header {
     padding-left: 40px;
-    font-size: 65px;
+    font-size: 80px;
     color: #fff6d2;
     font-family: "Dancing Script", cursive; }
   nav hr {
@@ -25,51 +33,57 @@ nav {
     height: 1.3px;
     background: #333;
     background-image: linear-gradient(to right, #333, #fff6d2 50%, #333); }
-  nav nav ul {
+  nav ul {
     margin: 0 0;
     list-style: none; }
+    nav ul li {
+      margin-right: 80px;
+      display: inline-block;
+      float: right; }
+      nav ul li a {
+        font-size: 20px;
+        text-decoration: none;
+        color: #fff6d2; }
 
-nav ul li {
-  margin-right: 80px;
-  display: inline-block;
-  float: right; }
-  nav ul li a {
-    font-size: 20px;
-    text-decoration: none;
-    color: #fff6d2; }
-
-#bio {
-  height: 100%;
-  background: url(../img/cover8.jpg);
-  background-size: cover;
-  background-position: center; }
-
+/*introduction*/
 #bio p {
   margin: 0 0;
-  clip-path: polygon(0 calc(100% - 35vw), 50% 100%, 0 100%);
-  background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.4), transparent 60%);
-  height: 75%;
+  clip-path: polygon(0 30%, 50% 100%, 0 100%);
+  background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.4), transparent 80%);
+  height: 72%;
   width: 100%;
   color: #F7F6ED;
-  font-size: 25px;
+  font-size: 20px;
   font-family: "Lato", sans-serif;
   line-height: 1.4em;
-  padding-left: 20px; }
+  padding-left: 10px; }
 
 #bio p::before {
   content: "";
   height: 100%;
   width: 100%;
   float: right;
-  shape-outside: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 0 calc(100% - 35vw)); }
+  shape-outside: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 0 30%); }
 
+/*Project*/
 #project {
   position: relative;
   height: 100%;
-  border: 1px rgba(0, 0, 0, 0.01) solid;
   background-color: black;
   color: #F7F6ED; }
 
+.demo {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0; }
+  .demo .lSSlideOuter.vertical {
+    width: 80%;
+    margin: 10% auto; }
+
+/*project right slider thumbnail */
+/*project right slider title*/
 #projectTitle {
   position: absolute;
   width: 100%;
@@ -79,87 +93,14 @@ nav ul li {
   background-image: linear-gradient(to left, black 2%, rgba(100, 100, 100, 0.23), black 35%); }
   #projectTitle p {
     margin: 0;
-    padding-top: 50px;
+    padding-top: 30px;
     padding-left: 80%;
     color: #fff6d2;
-    font-size: 55px;
+    font-size: 60px;
     font-family: "Lobster", cursive; }
 
-.demo {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  /*    ul {
-      	height: 100%;
-          list-style: none outside none;
-          padding-left: 0;
-          margin-bottom:0;
-          width: 100%;
-      }*/ }
-  .demo .lSSlideOuter.vertical {
-    width: 80%;
-    margin: 10% auto; }
-
-.lSSlideOuter .lSSlideWrapper.usingCss ul li {
-  position: relative;
-  display: block;
-  /*float: left;*/
-  margin-right: 6px;
-  cursor: pointer;
-  height: 100%; }
-  .lSSlideOuter .lSSlideWrapper.usingCss ul li div.img-div {
-    position: absolute;
-    top: 25%;
-    display: inline-block;
-    width: 50%; }
-    .lSSlideOuter .lSSlideWrapper.usingCss ul li div.img-div img {
-      border: 2px solid rgba(255, 255, 255, 0.3);
-      padding: 5px;
-      margin: 0 auto;
-      width: 80%;
-      display: block; }
-  .lSSlideOuter .lSSlideWrapper.usingCss ul li article {
-    margin: 0;
-    height: 100%;
-    position: absolute;
-    display: inline-block;
-    left: 50%;
-    width: 40%;
-    padding-left: 5%; }
-    .lSSlideOuter .lSSlideWrapper.usingCss ul li article h1 {
-      text-align: center;
-      border-left: 3px solid orange;
-      border-right: 3px solid orange;
-      margin-bottom: 100px;
-      font-size: 25px; }
-    .lSSlideOuter .lSSlideWrapper.usingCss ul li article ul {
-      display: block;
-      width: 80%;
-      height: 40%; }
-      .lSSlideOuter .lSSlideWrapper.usingCss ul li article ul li {
-        margin-bottom: 20px;
-        padding-left: 20px;
-        height: auto; }
-    .lSSlideOuter .lSSlideWrapper.usingCss ul li article a {
-      text-decoration: none;
-      color: #F7F6ED;
-      border: 1px solid black;
-      border-radius: 8px;
-      margin: 0 10px;
-      padding: 3px;
-      color: black;
-      font-size: 20px; }
-      .lSSlideOuter .lSSlideWrapper.usingCss ul li article a i {
-        margin-right: 7px; }
-    .lSSlideOuter .lSSlideWrapper.usingCss ul li article .applink {
-      background: coral; }
-    .lSSlideOuter .lSSlideWrapper.usingCss ul li article .gitlink {
-      background: darksalmon; }
-
+/*project right slider thunmnail image*/
 .lSSlideOuter ul.lSPager.lSGallery li {
-  /*background: rgba(0,0,0,0.5);*/
   position: relative; }
   .lSSlideOuter ul.lSPager.lSGallery li a img {
     position: absolute;
@@ -185,11 +126,76 @@ nav ul li {
     /* Safari 6.0 - 9.0 */
     filter: grayscale(0); }
 
+/*Single Slide*/
+li.lslide {
+  position: relative;
+  display: block;
+  margin-right: 6px;
+  cursor: pointer;
+  height: 100%;
+  /*slide image*/
+  /*project text*/ }
+  li.lslide .img-div {
+    position: absolute;
+    top: 25%;
+    display: inline-block;
+    width: 50%; }
+    li.lslide .img-div img {
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      padding: 5px;
+      margin: 0 auto;
+      width: 80%;
+      display: block; }
+  li.lslide article {
+    margin: 0;
+    height: 100%;
+    position: absolute;
+    display: inline-block;
+    left: 50%;
+    width: 40%;
+    padding-left: 5%; }
+    li.lslide article h1 {
+      text-align: center;
+      border-left: 3px solid orange;
+      border-right: 3px solid orange;
+      margin-bottom: 60px;
+      font-size: 25px; }
+    li.lslide article ul {
+      display: block;
+      width: 80%;
+      height: 45%;
+      list-style: none; }
+      li.lslide article ul li {
+        margin-bottom: 20px;
+        padding-left: 20px;
+        height: auto; }
+      li.lslide article ul li:before {
+        content: '\2023';
+        color: red;
+        padding-right: 5px; }
+    li.lslide article a {
+      text-decoration: none;
+      color: #F7F6ED;
+      border: 1px solid black;
+      border-radius: 8px;
+      margin: 0 10px;
+      padding: 3px;
+      color: black;
+      font-size: 20px; }
+      li.lslide article a i {
+        margin-right: 7px; }
+    li.lslide article .applink {
+      background: coral; }
+    li.lslide article .gitlink {
+      background: darksalmon; }
+
+/*contact*/
 #contact {
   width: 100%;
-  height: 20%;
+  height: 30%;
   color: #F7F6ED;
-  background: black; }
+  background: black;
+  font-size: 20px; }
   #contact p {
     margin: 0;
     text-align: center;
@@ -197,16 +203,14 @@ nav ul li {
   #contact p:first-child {
     padding-top: 20px;
     margin: 50px auto 0 auto;
-    width: 30%;
-    border-top: 1px rgba(255, 255, 255, 0.5) solid; }
+    width: 50%;
+    border-top: 1px moccasin solid; }
   #contact a {
     text-decoration: none;
     color: white;
-    font-size: 20px;
     border: 1px white solid;
     border-radius: 5px;
-    margin: 0 5px; }
-    #contact a i {
-      padding: 10px 10px; }
+    margin: 0 5px;
+    padding: 5px; }
 
 /*# sourceMappingURL=home.css.map */

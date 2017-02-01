@@ -10,6 +10,13 @@ $projectFont:'Lobster', cursive;
 $fontColor: #fff6d2;
 $fontColor2: #F7F6ED;
 
+
+
+
+
+
+
+
 html{
 	height: 100%;
 }
@@ -21,9 +28,26 @@ body{
 }
 
 
+
+
+
+/*bio div*/
+
+#bio {
+	height: 100%;
+	background: url(../img/cover.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+
+
+
+/*nav*/
+
 nav {
 	padding-top: 15px;
-	height: 25%;
+	height: 28%;
 	width: 100%;
 	background: rgba(0,0,0, 0.3);
 	clip-path: polygon(
@@ -35,7 +59,7 @@ nav {
 
 	header {
 		padding-left: 40px;
-		font-size: 65px;
+		font-size: 80px;
 		color: $fontColor;
 		font-family: $navLeft;
 	}
@@ -48,49 +72,43 @@ nav {
     	background-image: linear-gradient(to right, #333, $fontColor 50%, #333);
 	}
 
-	nav ul{
+	ul{
 		margin: 0 0;
 		list-style: none;
+
+		li {
+			margin-right: 80px;
+			display: inline-block;
+			float: right;
+
+			a {
+				font-size:20px;
+				text-decoration: none;
+				color: $fontColor;
+			}
+		}
 	}
 }
 
 
 
-nav ul li{
-	margin-right: 80px;
-	display: inline-block;
-	float: right;
-
-	a {
-		font-size:20px;
-		text-decoration: none;
-		color: $fontColor;
-	}
-}
-
-
-#bio {
-	height: 100%;
-	background: url(../img/cover8.jpg);
-	background-size: cover;
-	background-position: center;
-}
+/*introduction*/
 
 #bio p {
 	margin: 0 0 ;
 	clip-path: polygon(
-		0 calc(100% - 35vw),
+		0 30%,
 		50% 100%,
 		0 100%
 	);
-	background-image: linear-gradient(to bottom right, rgba(0,0,0,0.4), rgba(0,0,0,0) 60%);
-	height: 75%;
+	background-image: linear-gradient(to bottom right, rgba(0,0,0,0.4), rgba(0,0,0,0) 80%);
+	height: 72%;
 	width: 100%;
 	color: $fontColor2;
-	font-size: 25px;
+	font-size: 20px;
 	font-family: $introFont;
 	line-height: 1.4em;
-	padding-left: 20px;
+	padding-left: 10px;
 }
 
 #bio p::before {
@@ -98,7 +116,7 @@ nav ul li{
 	height: 100%;
 	width: 100%;
 	float: right;
-	shape-outside: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 0 calc(100% - 35vw));
+	shape-outside: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 0 30%);
 }
 
 
@@ -116,20 +134,35 @@ nav ul li{
 
 
 
-
-
+/*Project*/
 
 #project {
 	position: relative;
 	height: 100%;
-	border: 1px rgba(0,0,0,0.01) solid;
 	background-color: black;
 	color: $fontColor2;
 
 }
 
+.demo {
+	position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left:0;
+
+    .lSSlideOuter.vertical{
+    	width: 80%;
+    	margin: 10% auto;
+    }
+
+}
 
 
+
+/*project right slider thumbnail */
+
+/*project right slider title*/
 #projectTitle {
 	position:absolute;
 	width: 100%;
@@ -147,41 +180,42 @@ nav ul li{
 
 	p{	
 		margin: 0;
-		padding-top: 50px;
+		padding-top: 30px;
 		padding-left: 80%;
 		color:$fontColor;
-		font-size: 55px;
+		font-size: 60px;
 		font-family: $projectFont;
 	}
 }
 
 
+/*project right slider thunmnail image*/
 
+.lSSlideOuter ul.lSPager.lSGallery li{
+	position: relative;
 
+	a img{
+		position: absolute;
+		top:25%;
+		left:25%;
+		height: 50%;
+		width: auto;
+		border: 1px solid rgba(255,255,255,0.5);
+		border-radius: 5px;
+		padding: 3px;
+		transition: all 1s ease;
+		-webkit-filter: grayscale(1); /* Safari 6.0 - 9.0 */
+    	filter: grayscale(1);
+    	opacity: 0.4;
+    	filter: alpha(opacity=40); /* For IE8 and earlier */
+	}
 
-
-
-
-
-
-.demo {
-	position: absolute;
-    height: 100%;
-    width: 100%;
-    top:0;
-    left:0;
-/*    ul {
-    	height: 100%;
-        list-style: none outside none;
-        padding-left: 0;
-        margin-bottom:0;
-        width: 100%;
-    }*/
-
-    .lSSlideOuter.vertical{
-    	width: 80%;
-    	margin: 10% auto;
-    }
+	a img:hover{
+		opacity: 1;
+		filter: alpha(opacity=100); /* For IE8 and earlier */
+		-webkit-filter: grayscale(0); /* Safari 6.0 - 9.0 */
+    	filter: grayscale(0);
+	}
 
 }
 
@@ -189,23 +223,18 @@ nav ul li{
 
 
 
+/*Single Slide*/
 
-
-
-
-
-
-
-
-.lSSlideOuter .lSSlideWrapper.usingCss ul li {
+li.lslide {
 	position: relative;
     display: block;
-    /*float: left;*/
     margin-right: 6px;
     cursor:pointer;
     height: 100%;
 
-    div.img-div{
+    /*slide image*/
+
+    .img-div{
     	position: absolute;
     	top: 25%;
     	display: inline-block;
@@ -221,6 +250,8 @@ nav ul li{
 
     }
     
+    /*project text*/
+
     article {
     	margin: 0;
     	height: 100%;
@@ -234,19 +265,26 @@ nav ul li{
     		text-align: center;
     		border-left: 3px solid orange;
     		border-right: 3px solid orange;
-    		margin-bottom: 100px;
+    		margin-bottom: 60px;
     		font-size:25px;
     	}
 
     	ul {
     		display: block;
     		width: 80%;
-    		height: 40%;
+    		height: 45%;
+    		list-style: none;
 
     		li {
     			margin-bottom: 20px;
     			padding-left:20px;
     			height: auto;
+    		}
+
+    		li:before {
+    			content: '\2023';
+    			color: red;
+    			padding-right: 5px;
     		}
     	}
 
@@ -284,62 +322,14 @@ nav ul li{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-.lSSlideOuter ul.lSPager.lSGallery li{
-	/*background: rgba(0,0,0,0.5);*/
-	position: relative;
-
-
-	a img{
-		position: absolute;
-		top:25%;
-		left:25%;
-		height: 50%;
-		width: auto;
-		border: 1px solid rgba(255,255,255,0.5);
-		border-radius: 5px;
-		padding: 3px;
-		transition: all 1s ease;
-		-webkit-filter: grayscale(1); /* Safari 6.0 - 9.0 */
-    	filter: grayscale(1);
-    	opacity: 0.4;
-    	filter: alpha(opacity=40); /* For IE8 and earlier */
-	}
-
-	a img:hover{
-		opacity: 1;
-		filter: alpha(opacity=100); /* For IE8 and earlier */
-		-webkit-filter: grayscale(0); /* Safari 6.0 - 9.0 */
-    	filter: grayscale(0);
-	}
-
-}
-
-
-
-
-
-
-
-
-
+/*contact*/
 
 #contact{
 	width: 100%;
-	height: 20%;
+	height: 30%;
 	color: $fontColor2;
 	background: black;
+	font-size: 20px;
 
 	p{
 		margin:0;
@@ -350,21 +340,17 @@ nav ul li{
 	p:first-child {
 		padding-top: 20px;
 		margin:50px auto 0 auto;
-		width: 30%;
-		border-top:1px rgba(255,255,255,0.5) solid;
+		width: 50%;
+		border-top:1px rgb(255,228,181) solid;
 	}
 
 	a {
 		text-decoration: none;
 		color: white;
-		font-size: 20px;
 		border:1px white solid;
 		border-radius: 5px;
 		margin:0 5px;
-
-		i {
-			padding: 10px 10px;
-		}
+		padding:5px;
 
 	}
 
