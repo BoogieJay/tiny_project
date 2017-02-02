@@ -48,7 +48,7 @@ nav {
 /*introduction*/
 #bio p {
   margin: 0 0;
-  clip-path: polygon(0 30%, 50% 100%, 0 100%);
+  clip-path: polygon(0 calc(100% - 400px), 700px 100%, 0 100%);
   background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.4), transparent 80%);
   height: 72%;
   width: 100%;
@@ -63,7 +63,7 @@ nav {
   height: 100%;
   width: 100%;
   float: right;
-  shape-outside: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 0 30%); }
+  shape-outside: polygon(0 0, 100% 0, 100% 100%, 700px 100%, 0 calc(100% - 400px)); }
 
 /*Project*/
 #project {
