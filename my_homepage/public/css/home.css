@@ -22,7 +22,8 @@ nav {
   height: 28%;
   width: 100%;
   background: rgba(0, 0, 0, 0.3);
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 6vw)); }
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 6vw));
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 6vw)); }
   nav header {
     padding-left: 40px;
     font-size: 80px;
@@ -49,6 +50,7 @@ nav {
 #bio p {
   margin: 0 0;
   clip-path: polygon(0 calc(100% - 400px), 700px 100%, 0 100%);
+  -webkit-clip-path: polygon(0 calc(100% - 400px), 700px 100%, 0 100%);
   background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.4), transparent 80%);
   height: 72%;
   width: 100%;
@@ -63,7 +65,8 @@ nav {
   height: 100%;
   width: 100%;
   float: right;
-  shape-outside: polygon(0 0, 100% 0, 100% 100%, 700px 100%, 0 calc(100% - 400px)); }
+  shape-outside: polygon(0 0, 100% 0, 100% 100%, 700px 100%, 0 calc(100% - 400px));
+  -webkit-shape-outside: polygon(0 0, 100% 0, 100% 100%, 700px 100%, 0 calc(100% - 400px)); }
 
 /*Project*/
 #project {
@@ -90,6 +93,7 @@ nav {
   height: 100%;
   margin: 0;
   clip-path: polygon(60% 0, 100% 0, 100% 100%, 85% 100%, 85% 20%);
+  -webkit-clip-path: polygon(60% 0, 100% 0, 100% 100%, 85% 100%, 85% 20%);
   background-image: linear-gradient(to left, black 2%, rgba(100, 100, 100, 0.23), black 35%); }
   #projectTitle p {
     margin: 0;
