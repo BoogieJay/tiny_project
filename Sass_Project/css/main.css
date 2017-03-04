@@ -1,0 +1,46 @@
+@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans);
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web);
+a {
+  font-style: italic;
+  text-decoration: none; }
+
+body {
+  font-family: "Alegreya Sans", Arial, sans-serif;
+  color: #222222; }
+
+h1, h2, h3, h4 {
+  font-family: "Titillium Web", Georgia, serif; }
+
+p {
+  font-family: "Alegreya Sans", Arial, sans-serif; }
+
+a {
+  color: #f27731; }
+
+#header {
+  border-radius: 5px;
+  border: 2px solid gray;
+  box-shadow: 2px 0px 4px #999, 1px 1px 6px #f27731;
+  -moz-box-shadow: 2px 0px 4px #999, 1px 1px 6px #f27731;
+  -webkit-box-shadow: 2px 0px 4px #999, 1px 1px 6px #f27731;
+  height: 80px;
+  background-color: #170a48;
+  overflow: auto; }
+  #header #main-menu li {
+    display: inline; }
+  #header #main-menu a {
+    color: white; }
+  #header #logo {
+    width: 20px;
+    height: auto; }
+
+#main {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto; }
+
+#footer {
+  height: 90px;
+  background-color: #ccf962; }
+
+/*# sourceMappingURL=main.css.map */

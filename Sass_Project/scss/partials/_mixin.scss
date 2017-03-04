@@ -1,0 +1,32 @@
+@mixin fancy-links {
+
+	a {
+		font-style: italic;
+		text-decoration: none;
+	}
+	
+}
+
+
+@mixin rounded($radius: 5px){
+	border-radius: $radius;
+}
+
+
+@mixin box($radius: 5px, $border: 1px solid #333){
+	@include rounded($radius);
+	border: $border;
+}
+
+
+@mixin box-shadow($shadow...){
+	box-shadow: $shadow;
+	-moz-box-shadow: $shadow;
+	-webkit-box-shadow: $shadow;
+}
+
+
+@mixin google-font($font) {
+	$font: unquote($font);
+	@import url(https://fonts.googleapis.com/css?family=#{$font})
+}
