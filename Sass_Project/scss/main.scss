@@ -1,3 +1,4 @@
+@import "./partials/functions";
 @import "./partials/variables";
 @import "./partials/mixin";
 
@@ -8,6 +9,7 @@
 body {
   font-family: $text-font;
   color: $text-color;
+  font-size: em(18px);
 
   @include small-screen {
   	font-size: 125%;
@@ -24,6 +26,15 @@ p {
 
 a {
 	color: $link-color;
+
+	&:hover {
+		color: darken($link-color, 20%);
+	}
+}
+
+.warning-button {
+  @include warning;
+  padding: 8px 12px;
 }
 
 #header {
@@ -42,12 +53,21 @@ a {
 
 		a {
 			color: $menu-item-color;
+			padding: 6px 8px;
+			border-bottom: 1px solid transparentize(#fefefe, 1);
+			transition: border-bottom 0.5s;
+			transition-timing-function: ease-in-out;
+
+			&:hover {
+				border-bottom: 1px solid opacify(#fefefe, 0.5);
+			}
 		}
 	}
   
   #logo {
 		width: 20px;
 		height: auto;
+		margin-left: 20px;
   }
 }
 
@@ -63,13 +83,28 @@ a {
 	margin-right: auto;
 	
   #content {
+	float: left;
+	width: 6 * $col;
   }
 
   #sidebar {
+  	float: right;
+  	width: 2 * $col;
+
+  	li {
+  		list-style-type: none;
+  		padding: em(16px) em(20px);
+  		border-bottom: 1px dashed #999;
+
+  		&:hover {
+  			background-color: #efefef;
+  		}
+  	}
   }
 }
 
 #footer {
+	clear: both;
 	height: $footer-height;
 	background-color: $tenary-color;
 }

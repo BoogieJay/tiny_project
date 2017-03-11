@@ -31,6 +31,14 @@
 	
 }
 
+@mixin warning {
+  background-color: orange;
+  color: #fff;
+
+  &:hover {
+  	background-color: lighten(orange, 10%);
+  }
+}
 
 @mixin rounded($radius: 5px){
 	border-radius: $radius;
