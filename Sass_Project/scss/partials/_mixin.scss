@@ -1,3 +1,27 @@
+@mixin tiny-screen() {
+	@media only screen and (max-width: 320px) {
+		@content;
+	}
+}
+
+@mixin small-screen() {
+	@media only screen and (max-width: 480px) {
+		@content;
+	}
+}
+
+@mixin midium-screen() {
+	@media only screen and (max-width: 640px) {
+		@content;
+	}
+}
+
+@mixin large-screen() {
+	@media only screen and (max-width: 960px) {
+		@content;
+	}
+}
+
 @mixin fancy-links {
 
 	a {
