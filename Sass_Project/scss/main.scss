@@ -10,6 +10,7 @@ body {
   font-family: $text-font;
   color: $text-color;
   font-size: em(18px);
+  background-color: $body-background-color;
 
   @include small-screen {
   	font-size: 125%;
@@ -33,8 +34,13 @@ a {
 }
 
 .warning-button {
-  @include warning;
-  padding: 8px 12px;
+	@if($theme == Dark) {
+		@include warning;
+	} @else {
+		@include primary;
+	}
+  	
+  	padding: 8px 12px;
 }
 
 #header {
@@ -97,7 +103,12 @@ a {
   		border-bottom: 1px dashed #999;
 
   		&:hover {
-  			background-color: #efefef;
+  			@if ($theme == Dark) {
+  				background-color: #111;
+  			} @else {
+  				background-color: #efefef;
+  			}
+  			
   		}
   	}
   }

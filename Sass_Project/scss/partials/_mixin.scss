@@ -40,6 +40,15 @@
   }
 }
 
+@mixin primary {
+	background-color: pink;
+	color: #000;
+
+	&:hover {
+		background-color: lighten(pink, 5%);
+	}
+}
+
 @mixin rounded($radius: 5px){
 	border-radius: $radius;
 }
