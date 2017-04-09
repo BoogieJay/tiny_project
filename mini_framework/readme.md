@@ -7,9 +7,9 @@ Structure: 'G$()'
 Jquery supported
 
 Example: 
-
-		```javascript
-		var g = G$("FirstName", "LastName");
-		g.setLang('es').greet();
-		```
+		
+```javascript
+var g = G$("FirstName", "LastName");
+g.setLang('es').greet();
+```
 
