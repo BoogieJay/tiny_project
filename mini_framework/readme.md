@@ -1,8 +1,8 @@
-#A mini-framework called "Greetr"
+# A mini-framework called "Greetr"
 
-###When given a first name, last name, and optional language, it generates formal and informal greetings.And it supports English and Spanish.
+### When given a first name, last name, and optional language, it generates formal and informal greetings.And it supports English and Spanish.
 
-###Structure: 'G$()'
+### Structure: 'G$()'
 
-###Jquery supported
+### Jquery supported
 
