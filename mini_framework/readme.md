@@ -13,3 +13,4 @@ var g = G$("FirstName", "LastName");
 g.setLang('es').greet();
 ```
 
+
